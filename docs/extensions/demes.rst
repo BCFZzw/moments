@@ -724,7 +724,7 @@ plotting features:
 
 .. jupyter-execute::
 
-    fs = moments.Spectrum.from_demes(output, samples={"MSL": data.sample_sizes})
+    fs = moments.Spectrum.from_demes(output, samples={"MSL": data.sample_sizes[0]})
     fs = moments.Misc.flip_ancestral_misid(fs, opt_params[-1])
     moments.Plotting.plot_1d_comp_multinom(fs, data)
 
