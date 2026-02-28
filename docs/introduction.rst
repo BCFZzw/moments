@@ -61,6 +61,15 @@ If you use ``moments.TwoLocus`` in your research, please cite:
 Change log
 **********
 
+1.5.1
+=====
+- Drop python 3.10 support
+- Add python 3.14 support
+
+1.5.0
+=====
+- Add time-windowing of mutation origin in Demes.SFS
+
 1.4.6
 =====
 - Drop wheel building for macos-13, add support for macos-15
