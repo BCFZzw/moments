@@ -417,7 +417,7 @@ def compute_pairwise_stats(Gs, genotypes=True, pos_array = None, distance_constr
     return D2, Dz, pi2, D
 
 
-def compute_average_stats(Gs, pos_array = None, genotypes=True, distance_constrained = 0):
+def compute_average_stats(Gs, genotypes=True, pos_array = None, distance_constrained = 0):
     """
     Takes the outputs of ``compute_pairwise_stats`` and returns
     the average value for each statistic.
