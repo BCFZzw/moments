@@ -399,7 +399,7 @@ def compute_pairwise_stats(Gs, genotypes=True, pos_array = None, distance_constr
         assert(len(pos_array) == len(G_dict))
         ### assert dtype is np.int32 for input
         assert pos_array.dtype == np.int32
-        Bools = spt.distance_constrained_pairs_filtering(pos_array, distance_constrained)
+        Bools = spt.count_genotypes_distance_constrained(pos_array, distance_constrained)
         assert(len(Bools) == len(Counts))
         Counts = Counts[Bools]
 
