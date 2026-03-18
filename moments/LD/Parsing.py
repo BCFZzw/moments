@@ -372,6 +372,11 @@ def compute_pairwise_stats(Gs, genotypes=True, pos_array = None, distance_constr
         Missing data is encoded as -1.
     :param genotypes: If True, use 0, 1, 2 genotypes. If False,
         use 0, 1 phased haplotypes.
+    :param pos_array: The position array for the genotype matrix, 
+        of size n. 
+        Required when distance_constrained is larger than 0.
+    :param distance_constrained: Computes the stats only for pairs of loci 
+        larger than this given threshold. Default as 0.
     """
     if ld_extensions != 1:
         raise ValueError(
@@ -427,6 +432,11 @@ def compute_average_stats(Gs, genotypes=True, pos_array = None, distance_constra
         Missing data is encoded as -1.
     :param genotypes: If True, use 0, 1, 2 genotypes. If False,
         use 0, 1 phased haplotypes.
+    :param pos_array: The position array for the genotype matrix, 
+        of size n. 
+        Required when distance_constrained is larger than 0.
+    :param distance_constrained: Computes the stats only for pairs of loci 
+        larger than this given threshold. Default as 0.
     """
     D2, Dz, pi2, D = compute_pairwise_stats(Gs, genotypes = genotypes, pos_array = pos_array, distance_constrained = distance_constrained)
     return np.mean(D2), np.mean(Dz), np.mean(pi2), np.mean(D)
