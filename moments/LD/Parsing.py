@@ -373,7 +373,7 @@ def compute_pairwise_stats(Gs, genotypes=True, pos_array = None, distance_constr
     :param genotypes: If True, use 0, 1, 2 genotypes. If False,
         use 0, 1 phased haplotypes.
     :param pos_array: The position array for the genotype matrix, 
-        of size n. 
+        of size n, and has dtype np.int32. 
         Required when distance_constrained is larger than 0.
     :param distance_constrained: Computes the stats only for pairs of loci 
         larger than this given threshold. Default as 0.
@@ -433,7 +433,7 @@ def compute_average_stats(Gs, genotypes=True, pos_array = None, distance_constra
     :param genotypes: If True, use 0, 1, 2 genotypes. If False,
         use 0, 1 phased haplotypes.
     :param pos_array: The position array for the genotype matrix, 
-        of size n. 
+        of size n, and has dtype np.int32. 
         Required when distance_constrained is larger than 0.
     :param distance_constrained: Computes the stats only for pairs of loci 
         larger than this given threshold. Default as 0.
